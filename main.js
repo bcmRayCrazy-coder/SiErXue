@@ -1,11 +1,24 @@
-const { BrowserWindow, app, dialog } = require('electron');
+const { BrowserWindow, app, dialog, Menu } = require('electron');
 
-var win;
+const dockMenu = Menu.buildFromTemplate([{
+        label: '新建窗口',
+        click() { createStudentPage }
+    }, {
+        label: 'New Window with Settings',
+        submenu: [
+            { label: 'Basic' },
+            { label: 'Pro' }
+        ]
+    },
+    { label: 'New Command...' }
+]);
 
 function createStudentPage() {
     // 学生端界面
-    win = new BrowserWindow({ width: 800, height: 600 });
+    const win = new BrowserWindow({ width: 800, height: 600 });
     win.loadURL(__dirname + '/src/student.html');
+
+    app.dock.setMenu(dockMenu);
 };
 
 function closeDialog() {
