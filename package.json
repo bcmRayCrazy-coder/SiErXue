@@ -1,0 +1,27 @@
+{
+    "name": "sierxue",
+    "version": "1.0.0",
+    "description": "A teacher and student homework client.",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "run": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bcmRayCrazy-coder/SiErXue.git"
+    },
+    "keywords": [
+        "homework"
+    ],
+    "author": "bcmray_crazy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bcmRayCrazy-coder/SiErXue/issues"
+    },
+    "homepage": "https://github.com/bcmRayCrazy-coder/SiErXue#readme",
+    "dependencies": {
+        "electron": "^13.2.1"
+    }
+}
