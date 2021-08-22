@@ -1,17 +1,12 @@
 const { BrowserWindow, app, dialog, Menu } = require('electron');
 
 const dockMenu = Menu.buildFromTemplate([{
-        label: '新建窗口',
-        click() { createStudentPage }
-    }, {
-        label: 'New Window with Settings',
-        submenu: [
-            { label: 'Basic' },
-            { label: 'Pro' }
-        ]
-    },
-    { label: 'New Command...' }
-]);
+    label: '新建窗口',
+    click() { createStudentPage() }
+}, {
+    label: '退出应用',
+    click() { closeDialog() }
+}, ]);
 
 function createStudentPage() {
     // 学生端界面
