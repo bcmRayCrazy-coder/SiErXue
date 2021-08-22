@@ -11,7 +11,7 @@ const dockMenu = Menu.buildFromTemplate([{
 function createStudentPage() {
     // 学生端界面
     const win = new BrowserWindow({ width: 800, height: 600 });
-    win.loadURL(__dirname + '/src/student.html');
+    win.loadURL('119.29.64.129:81/student/pages/student.html');
 
     app.dock.setMenu(dockMenu);
 };
